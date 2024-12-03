@@ -1,0 +1,226 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Navbar (igual al original con media queries) */
+.navbar {
+    background-color: #ffffff;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Agrega sombra para destacar */
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 1rem;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #c51b1b;
+}
+
+.navbar .logo-img {
+    width: 100px;
+    margin-right: 10px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 1.5rem;
+}
+
+.nav-links a {
+    color: #070927;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.nav-links a:hover {
+    color: #ffffff;
+    background-color: #D94E4E;
+}
+
+/* Responsive styles */
+.menu-toggle {
+    display: none; /* Oculto por defecto */
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #404285;
+}
+
+.menu-toggle:focus {
+    outline: none;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Ocultamos las opciones en dispositivos pequeños */
+        flex-direction: column; /* Apilamos los elementos verticalmente */
+        position: absolute; /* Para que floten sobre el contenido */
+        top: 100%;
+        left: 0;
+        background-color: #ffffff;
+        width: 100%;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        display: flex; /* Mostramos el menú cuando sea necesario */
+    }
+
+    .nav-links li {
+        margin: 0; /* Eliminamos márgenes */
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .nav-links a {
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: block; /* Mostramos el botón hamburguesa */
+    }
+}
+
+/* Sección de destinos */
+.destinos {
+    padding: 6rem 2rem 4rem;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+.destinos h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #404285;
+}
+
+.destinos-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.destino-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: calc(33.33% - 2rem);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.destino-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.destino-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.destino-card h2 {
+    margin: 1rem;
+    font-size: 1.5rem;
+    color: #D94E4E;
+}
+
+.destino-card p {
+    margin: 0 1rem 1rem;
+    font-size: 1rem;
+    color: #555;
+}
+
+.destino-card .button {
+    display: block;
+    text-align: center;
+    margin: 1rem auto;
+    padding: 0.5rem 1rem;
+    background-color: #404285;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.destino-card .button:hover {
+    background-color: #D94E4E;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .destino-card {
+        width: calc(50% - 2rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .destino-card {
+        width: 100%;
+    }
+}
+
+/* Footer */
+.footer {
+    background-color: #003366;
+    color: #ffffff;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 2rem;
+}
+
+.social-links a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-right: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #66a3ff;
+}
+
+.footer p {
+    margin-top: 1rem;
+    font-size: 0.875rem;
+}

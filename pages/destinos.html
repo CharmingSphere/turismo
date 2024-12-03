@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinos Turísticos</title>
+    <link rel="stylesheet" href="../css/destinos.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="../assets/logo_turismo.png" alt="Logo Turismo" class="logo-img">
+                Agencia Turismo
+            </a>
+            <button class="menu-toggle" aria-label="Abrir menú">
+                ☰
+            </button>
+            <ul class="nav-links">
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="destinos.html">Destinos</a></li>
+                <li><a href="#">Sobre Nosotros</a></li>
+                <li><a href="agenda.html">Agenda</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Sección de Destinos -->
+    <section class="destinos" id="destinos">
+        <h1>Explora Nuestros Destinos</h1>
+        <div class="destinos-container">
+            <div class="destino-card">
+                <img src="../assets/Veracruz.jpg" alt="Veracruz">
+                <h2>Veracruz</h2>
+                <p>Disfruta de sus playas, su gastronomía y su increíble historia en lugares como el puerto y la fortaleza de San Juan de Ulúa.</p>
+                <a href="pages/agenda.html" class="button">Planifica tu visita</a>
+            </div>
+            <div class="destino-card">
+                <img src="../assets/teotihuacan.jpg" alt="Teotihuacan">
+                <h2>Teotihuacan</h2>
+                <p>Maravíllate con las Pirámides del Sol y la Luna y explora una de las civilizaciones más fascinantes de México.</p>
+                <a href="pages/agenda.html" class="button">Planifica tu visita</a>
+            </div>
+            <div class="destino-card">
+                <img src="../assets/puerto_escondido.jpeg" alt="Puerto Escondido">
+                <h2>Puerto Escondido</h2>
+                <p>Relájate en sus playas paradisíacas y practica surf en uno de los destinos más atractivos del Pacífico.</p>
+                <a href="pages/agenda.html" class="button">Planifica tu visita</a>
+            </div>
+            <div class="destino-card">
+                <img src="../assets/cancun.jpg" alt="Cancún">
+                <h2>Cancún</h2>
+                <p>Vive el lujo, la diversión y la naturaleza en uno de los destinos más populares del Caribe mexicano.</p>
+                <a href="pages/agenda.html" class="button">Planifica tu visita</a>
+            </div>
+            <div class="destino-card">
+                <img src="../assets/guanajuato.jpg" alt="Guanajuato">
+                <h2>Guanajuato</h2>
+                <p>Piérdete en sus callejones llenos de historia, colores y romance en el famoso Callejón del Beso.</p>
+                <a href="pages/agenda.html" class="button">Planifica tu visita</a>
+            </div>
+            <div class="destino-card">
+                <img src="../assets/tulum.jpg" alt="Tulum">
+                <h2>Tulum</h2>
+                <p>Descubre las ruinas mayas frente al mar y sumérgete en los cenotes más espectaculares del mundo.</p>
+                <a href="pages/agenda.html" class="button">Planifica tu visita</a>
+            </div>
+        </div>
+    </section>
+
+<script>
+            document.addEventListener('DOMContentLoaded', () => {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    });
+</script>
+<footer class="footer">
+    <div class="container">
+        <div class="social-links">
+            <a href="https://wa.me/123456789" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i> Facebook</a>
+        </div>
+        <p>&copy; 2024 Todos los derechos reservados.</p>
+    </div>
+</footer>
+</body>
+</html>

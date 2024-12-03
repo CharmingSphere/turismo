@@ -1,0 +1,295 @@
+/* Reset de estilos por defecto */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #ffffff;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Agrega sombra para destacar */
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 1rem;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #c51b1b;
+}
+
+.navbar .logo-img {
+    width: 100px;
+    margin-right: 10px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 1.5rem;
+}
+
+.nav-links a {
+    color: #070927;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.nav-links a:hover {
+    color: #ffffff;
+    background-color: #D94E4E;
+}
+
+/* Responsive styles */
+.menu-toggle {
+    display: none; /* Oculto por defecto */
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #404285;
+}
+
+.menu-toggle:focus {
+    outline: none;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Ocultamos las opciones en dispositivos pequeños */
+        flex-direction: column; /* Apilamos los elementos verticalmente */
+        position: absolute; /* Para que floten sobre el contenido */
+        top: 100%;
+        left: 0;
+        background-color: #ffffff;
+        width: 100%;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        display: flex; /* Mostramos el menú cuando sea necesario */
+    }
+
+    .nav-links li {
+        margin: 0; /* Eliminamos márgenes */
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .nav-links a {
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: block; /* Mostramos el botón hamburguesa */
+    }
+}
+
+/* Sección Hero */
+.hero {
+    position: relative; /* Necesario para posicionar el pseudo-elemento */
+    background-image: url('puerto_escondido.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+    overflow: hidden; /* Asegura que el pseudo-elemento no se desborde */
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Pantalla negra semi-transparente */
+    z-index: 1; /* Coloca la pantalla negra detrás del contenido */
+}
+
+.hero-content {
+    position: relative; /* Asegura que el contenido esté por delante de la pantalla negra */
+    z-index: 2; /* Coloca el contenido por delante del pseudo-elemento */
+}
+
+.hero-content .logo_hero{
+    width: 250px;
+    height: auto;
+    filter: drop-shadow(10px 10px 20px rgb(255, 255, 255));
+}
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.btn-hero {
+    background-color: #66a3ff;
+    color: #003366;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-hero:hover {
+    background-color: #004d99;
+    color: #ffffff;
+}
+
+/* Galería de Destinos */
+.gallery {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+}
+
+.gallery-carousel {
+    position: relative;
+    overflow: hidden;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.carousel-item p {
+    margin-top: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.carousel-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.carousel-buttons button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+/* Pasos para Registrarte */
+.registration {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.registration h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.steps {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.step {
+    flex: 1;
+    max-width: 200px;
+}
+
+.btn-register {
+    background-color: #003366;
+    color: #ffffff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-register:hover {
+    background-color: #66a3ff;
+}
+
+/* Footer */
+.footer {
+    background-color: #003366;
+    color: #ffffff;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 2rem;
+}
+
+.social-links a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-right: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #66a3ff;
+}
+
+.footer p {
+    margin-top: 1rem;
+    font-size: 0.875rem;
+}
